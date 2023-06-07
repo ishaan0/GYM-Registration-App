@@ -1,0 +1,32 @@
+.wrapper {
+  .logo {
+    margin-top: 10px;
+    text-align: center;
+    img {
+      width: 250px;
+    }
+  }
+
+  .registration-form {
+    margin-top: 10px;
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      .col {
+        flex: 1;
+        mat-form-field {
+          width: 100%;
+        }
+      }
+    }
+
+    .radio-btn-group {
+      display: flex;
+      flex-direction: column;
+      margin: 3px 0;
+      align-items: flex-start;
+    }
+  }
+}

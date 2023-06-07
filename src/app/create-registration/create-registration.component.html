@@ -1,1 +1,142 @@
-<p>create-registration works!</p>
+<div class="wrapper">
+  <div class="logo">
+    <img src="../../assets/gymlogo.png" alt="gym logo" />
+  </div>
+
+  <div class="registration-form">
+    <form [formGroup]="registrationForm">
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input
+              formControlName="firstName"
+              matInput
+              placeholder="First Name"
+            />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input
+              formControlName="lastName"
+              matInput
+              placeholder="Last Name"
+            />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput placeholder="Email" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile</mat-label>
+            <input
+              formControlName="mobile"
+              matInput
+              placeholder="Mobile"
+              maxlength="11"
+            />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Weight</mat-label>
+            <input formControlName="weight" matInput placeholder="Weight" />
+            <mat-icon matSuffix>fitness_center</mat-icon>
+            <mat-hint><small>Unit is KGs</small></mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Height</mat-label>
+            <input formControlName="height" matInput placeholder="height" />
+            <mat-icon matSuffix>height</mat-icon>
+            <mat-hint><small>Unit is meters</small></mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row mt-20">
+        <div class="col">
+          <label>Do you require trainer?</label>
+          <mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="radio-btn-group"
+            formControlName="requireTrainer"
+          >
+            <mat-radio-button
+              class="radio-btn"
+              *ngFor="let trainerOpt of ['Yes', 'No']"
+              [value]="trainerOpt"
+            >
+              {{ trainerOpt }}
+            </mat-radio-button>
+          </mat-radio-group>
+          <div>
+            Selected Option is: {{ registrationForm.value?.requireTrainer }}
+          </div>
+        </div>
+        <div class="col">
+          <label>Gender</label>
+          <mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="radio-btn-group"
+            formControlName="gender"
+          >
+            <mat-radio-button
+              class="radio-btn"
+              *ngFor="let genderOpt of ['Male', 'Female']"
+              [value]="genderOpt"
+            >
+              {{ genderOpt }}
+            </mat-radio-button>
+          </mat-radio-group>
+          <div>Selected gender is: {{ registrationForm.value?.gender }}</div>
+        </div>
+      </div>
+
+      <div class="row mt-20">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Select package</mat-label>
+            <mat-select formControlName="package" >
+              <mat-option *ngFor="let package of packages" [value]="package">{{
+                package
+              }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Which of the following is important to you? </mat-label>
+            <mat-select formControlName="important" multiple>
+              <mat-option
+                *ngFor="let important of importantList"
+                [value]="important"
+                >{{ important }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
