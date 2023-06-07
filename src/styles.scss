@@ -22,6 +22,12 @@ $my-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -29,4 +35,93 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// margin top class
+.mt-10{
+  margin-top: 10px;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.mt-30{
+  margin-top: 30px;
+}
+
+// margin bottom class
+.mb-10{
+  margin-bottom: 10px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+.mb-30{
+  margin-bottom: 30px;
+}
+
+// margin left class
+.ml-10{
+  margin-left: 10px;
+}
+.ml-20{
+  margin-left: 20px;
+}
+.ml-30{
+  margin-left: 30px;
+}
+
+// margin right class
+.mr-10{
+  margin-right: 10px;
+}
+.mr-20{
+  margin-right: 20px;
+}
+.mr-30{
+  margin-right: 30px;
+}
+
+
+// padding top class
+.pt-10{
+  padding-top: 10px;
+}
+.pt-20{
+  padding-top: 20px;
+}
+.pt-30{
+  padding-top: 30px;
+}
+
+// padding bottom class
+.pb-10{
+  padding-bottom: 10px;
+}
+.pb-20{
+  padding-bottom: 20px;
+}
+.pb-30{
+  padding-bottom: 30px;
+}
+
+// padding left class
+.pl-10{
+  padding-left: 10px;
+}
+.pl-20{
+  padding-left: 20px;
+}
+.pl-30{
+  padding-left: 30px;
+}
+
+// padding right class
+.pr-10{
+  padding-right: 10px;
+}
+.pr-20{
+  padding-right: 20px;
+}
+.pr-30{
+  padding-right: 30px;
 }
